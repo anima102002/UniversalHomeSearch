@@ -1,0 +1,367 @@
+/* Global Styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  box-sizing: border-box;
+}
+
+/* Header */
+header {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: center; /* Center the contents */
+  align-items: center;
+  position: relative;
+}
+
+.hamburger {
+  display: none; /* Initially hide the hamburger */
+  font-size: 1.5rem;
+  color: #333;
+  cursor: pointer;
+  position: absolute;
+  left: 20px; /* Position hamburger on the left */
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 600;
+  color: #4CAF50;
+  text-align: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  position: absolute;
+  right: 20px; /* Right-align nav links */
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+.nav-links li a:hover, .nav-links li a.active {
+  color: #4CAF50;
+  border-bottom: 2px solid #4CAF50;
+}
+
+/* Change header background on scroll */
+header.scrolled {
+  background-color: #f1f1f1;
+}
+
+/* Hero Section */
+.hero-section {
+  height: 100vh;
+  background: url('https://media.istockphoto.com/id/645239482/photo/your-new-house.jpg?s=612x612&w=0&k=20&c=5QQWiL-Bk-H69WDQGEstbFQ0UtuslX4MTiD5Bh5o7Fk=') no-repeat center center/cover;
+  position: relative;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-section h1 {
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+}
+
+.hero-section p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #388E3C;
+}
+
+/* Section Titles */
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #4CAF50;
+}
+
+/* Properties Section */
+.properties {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 50px 20px;
+}
+
+.property-card {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+}
+
+.property-card:hover {
+  transform: translateY(-10px);
+}
+
+.property-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.property-details {
+  padding: 20px;
+}
+
+.property-details h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.property-details p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.details-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.details-button:hover {
+  background-color: #388E3C;
+}
+
+/* Services Section */
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 50px 20px;
+}
+
+.service-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+  width: 100%;
+  max-width: 300px;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.service-button {
+  background-color: #FF5722;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.service-button:hover {
+  background-color: #E64A19;
+}
+
+/* Contact Section */
+.contact-section {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 50px;
+}
+
+.contact-form button:hover {
+  background-color: #388E3C;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #333;
+  color: #fff;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .hero-section h1 {
+      font-size: 3rem;
+  }
+
+  .hero-section p {
+      font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar {
+      flex-direction: column;
+  }
+
+  .nav-links {
+      margin-top: 10px;
+      flex-direction: column;
+  }
+
+  .nav-links li {
+      margin: 10px 0;
+  }
+
+  .properties-container, .services-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .property-card, .service-card {
+      max-width: 100%;
+      width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section h1 {
+      font-size: 2.5rem;
+  }
+
+  .hero-section p {
+      font-size: 1rem;
+  }
+
+  .navbar {
+      justify-content: center;
+  }
+
+  .hamburger {
+      display: block;
+  }
+
+  .logo {
+      text-align: center;
+      margin: 0 auto;
+  }
+
+  .nav-links {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      flex-direction: column;
+      align-items: center;
+      display: none;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active {
+      display: flex;
+  }
+
+  .nav-links li {
+      margin: 15px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section h1 {
+      font-size: 2rem;
+  }
+
+  .hero-section p {
+      font-size: 0.9rem;
+  }
+}
